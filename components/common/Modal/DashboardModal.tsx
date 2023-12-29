@@ -18,7 +18,7 @@ function DashboardModal({ type }: Props) {
   const colors = [GREEN, PURPLE, ORANGE, BLUE, PINK[1]];
   const initialColor = colors[0];
   const [color, setColor] = useState(initialColor);
-  const { hideModal } = useStore((state) => ({ hideModal: state.hideModal }));
+  const hideModal = useStore((state) => state.hideModal);
   const { register, handleSubmit } = useForm();
   const { push } = useRouter();
 
